@@ -1,6 +1,6 @@
 from pymysql import *  # 数据库驱动
 
-conn = connect(host='localhost', port=3306, user='root', password='123456', database='weiboarticles')
+conn = connect(host='localhost', port=3306, user='root', password='Lx284190056', database='weiboarticles')
 cursor = conn.cursor()
 
 
