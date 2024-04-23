@@ -1,0 +1,102 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- 默认值是登录-->
+      <title>
+
+          {% block title %}
+          登录
+          {% endblock %}</title>
+
+      <!-- static前加一个“/” ，需要绝对路径-->
+      <link rel="stylesheet" href="/static/css/backend-plugin.min.css">
+      <link rel="stylesheet" href="/static/css/backend.css">
+  </head>
+
+  <body class=" ">
+    <!-- loader Start -->
+    <div id="loading">
+          <div id="loading-center">
+          </div>
+    </div>
+    <!-- loader END -->
+
+      <div class="wrapper">
+    <section class="login-content" style="background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.91bf130cacbf551c81d07503cce65768?rik=KvoKVgITxBE5dQ&riu=http%3a%2f%2fwww.gd.gov.cn%2fimg%2f0%2f2%2f2938%2f104994.jpg&ehk=xUvCs24YkNeJkNs3Hken%2fjwM18p8sx3k8wVQs27GHWY%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1); background-repeat: no_repeat; background-size: cover">
+         <div class="container h-100">
+            <div class="row align-items-center justify-content-center h-100">
+               <div class="col-md-5">
+                  <div class="card p-3">
+
+                     {% block content %}
+
+                     <div class="card-body">
+                        <div class="auth-logo">
+                            <!--      图片                      -->
+<!--                            <img src="http://weibo.com/favicon.ico" class="img-fluid  rounded-normal  darkmode-logo" alt="logo">-->
+<!--                            <img src="http://weibo.com/favicon.ico" class="img-fluid rounded-normal light-logo" alt="logo">-->
+                            <img src="https://images.liqucn.com/mini/120x120/img/h02/h21/img_localize_19d81dc0ad70a53ae90c1c8fee4095f5_120x120_120x120.png
+                            " class="img-fluid  rounded-normal  darkmode-logo" alt="logo">
+                            <img src="https://images.liqucn.com/mini/120x120/img/h02/h21/img_localize_19d81dc0ad70a53ae90c1c8fee4095f5_120x120_120x120.png
+                            " class="img-fluid rounded-normal light-logo" alt="logo">
+                        </div>
+                        <h3 class="mb-3 font-weight-bold text-center">登录</h3>
+                        <p class="text-center text-secondary mb-4">欢迎使用政务咨询分析可视化系统</p>
+
+                        </div>
+                        <div class="mb-5">
+                            <p class="line-around text-secondary mb-0"><span class="line-around-1">请输入用户名和密码</span></p>
+                        </div>
+                        <form method="POST" action="/user/login">
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="form-group">
+                                    <label class="text-secondary">用户名</label>
+                                    <input class="form-control" name="username" type="text" placeholder="请输入用户名">
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 mt-2">
+                                 <div class="form-group">
+                                     <div class="d-flex justify-content-between align-items-center">
+                                         <label class="text-secondary">密码</label>
+                                     </div>
+                                    <input class="form-control" name="password" type="password" placeholder="请输入密码">
+                                 </div>
+                              </div>
+                           </div>
+                           <button type="submit" class="btn btn-primary btn-block mt-2">登录</button>
+                           <div class="col-lg-12 mt-3">
+                                <p class="mb-0 text-center"> 还没有账号？ <a href="/user/register"> 注册 </a></p>
+                           </div>
+                        </form>
+                     </div>
+
+                     {% endblock %}
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+
+    <!-- static前加一个“/” ，需要绝对路径-->
+    <script src="/static/js/backend-bundle.min.js"></script>
+    <script src="/static/js/customizer.js"></script>
+    <script src="/static/js/sidebar.js"></script>
+    <script src="/static/js/flex-tree.min.js"></script>
+    <script src="/static/js/tree.js"></script>
+    <script src="/static/js/table-treeview.js"></script>
+    <script src="/static/js/sweetalert.js"></script>
+    <script src="/static/js/vector-map-custom.js"></script>
+    <script src="/static/js/chart-custom.js"></script>
+    <script src="/static/js/01.js"></script>
+    <script src="/static/js/02.js"></script>
+    <script src="/static/js/slider.js"></script>
+    <script src="/static/js/index.js" type="module"></script>
+    <script src="/static/js/app.js"></script>  </body>
+</html>
