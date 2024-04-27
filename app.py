@@ -4,7 +4,7 @@ from flask import Flask, session, request, render_template
 from flask import jsonify
 from werkzeug.utils import redirect
 
-from utils.bertopic_util import save_data2db
+from utils.bertopic.bertopic_util import save_data2db
 from views.page import page
 from views.user import user
 
@@ -19,6 +19,17 @@ def hello_world():
     return render_template('index.html')
     return session.clear()
 
+
+@app.route("/save_data", methods=['GET', 'POST'])
+def save_data():
+    try:
+        # 调用save_data2db函数
+        save_data2db()
+        # 如果函数执行成功，返回HTTP状态码200和成功消息
+        return jsonify({'code': 200, 'message': '保存数据成功!'})
+    except Exception as e:
+        # 如果函数执行失败，返回HTTP状态码500和失败消息
+        return jsonify({'code': 500, 'message': '保存数据失败!', 'error': str(e)}), 500
 
 @app.route("/save_data", methods=['GET', 'POST'])
 def save_data():
